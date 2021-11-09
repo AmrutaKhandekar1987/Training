@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="RankMF : amfi" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="RankMF : Mf_Basket" enabled="true">
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -28,47 +28,40 @@
           <collectionProp name="CookieManager.cookies"/>
         </CookieManager>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/modules/NearestFinancialAdvisorsDetails" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/webservices/Mf_Basket/1.2" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
-              <elementProp name="nfaCity" elementType="HTTPArgument" enabled="true">
-                <stringProp name="Argument.name">nfaCity</stringProp>
-                <stringProp name="Argument.value"></stringProp>
+              <elementProp name="user" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">user</stringProp>
+                <stringProp name="Argument.value">DM31372</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
-              <elementProp name="nfaPin" elementType="HTTPArgument" enabled="true">
-                <stringProp name="Argument.name">nfaPin</stringProp>
-                <stringProp name="Argument.value"></stringProp>
+              <elementProp name="api" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">api</stringProp>
+                <stringProp name="Argument.value">1.2</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
-              <elementProp name="nfaAddress" elementType="HTTPArgument" enabled="true">
-                <stringProp name="Argument.name">nfaAddress</stringProp>
-                <stringProp name="Argument.value"></stringProp>
+              <elementProp name="client_id" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">client_id</stringProp>
+                <stringProp name="Argument.value">RR30633</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
-              <elementProp name="nfaARN" elementType="HTTPArgument" enabled="true">
-                <stringProp name="Argument.name">nfaARN</stringProp>
-                <stringProp name="Argument.value"></stringProp>
+              <elementProp name="unique_code" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">unique_code</stringProp>
+                <stringProp name="Argument.value">84</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
-              <elementProp name="nfaARNName" elementType="HTTPArgument" enabled="true">
-                <stringProp name="Argument.name">nfaARNName</stringProp>
-                <stringProp name="Argument.value"></stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="nfaType" elementType="HTTPArgument" enabled="true">
-                <stringProp name="Argument.name">nfaType</stringProp>
-                <stringProp name="Argument.value">All</stringProp>
+              <elementProp name="access_token" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">access_token</stringProp>
+                <stringProp name="Argument.value">${access_token}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
@@ -84,11 +77,11 @@
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <stringProp name="HTTPSampler.domain">dev.rankmf.com</stringProp>
-          <stringProp name="HTTPSampler.path">/modules/NearestFinancialAdvisorsDetails</stringProp>
+          <stringProp name="HTTPSampler.path">/webservices/Mf_Basket/1.2</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="/modules/NearestFinancialAdvisorsDetails" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="/webservices/Mf_Basket/1.2" enabled="true">
             <collectionProp name="HeaderManager.headers"/>
           </HeaderManager>
           <hashTree/>
